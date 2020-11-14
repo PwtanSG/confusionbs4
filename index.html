@@ -49,6 +49,9 @@
                 <div class="col-12 col-sm align-self-center">
                     <img src="img/logo.png" class="img-fluid">
                 </div>
+                <div class="col-12 col-sm align-self-center align-items-center">
+                    <a role="button" class="btn btn-sm btn-block btn-warning" href="#reservation">Reserve Table</a>
+                </div>
             </div>
         </div>
     </header>
@@ -56,16 +59,12 @@
     <div class="container">
         <!--Bs4 alerts -->
         <div class="alert alert-warning alert-dismissible fade show" role="alert">
-            <strong>Hello!</strong> You should check out on some of those fields below!
+            <strong>Hello!</strong> You should check out on our hot items below!
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
         </div>
 
-        <!--Bs4 progress bar-->
-        <div class="progress">
-            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
 
         <div class="row row-content align-items-center">
             <div class="col-12 col-sm-4 order-sm-last col-md-3">
@@ -75,7 +74,7 @@
                 <div class="media">
                     <img class="d-flex mr-3 img-thumbnail align-self-center" src="img/uthappizza.png" alt="uthappizza">
                     <div class="media-body">
-                        <h2 class="mt-0">Uthappizza <span class="badge badge-danger">NEW</span> <span class="badge badge-pill badge-secondary">$4.99</span></h2>
+                        <h2 class="mt-0">Uthappizza <span class="badge badge-danger">HOT</span> <span class="badge badge-pill badge-secondary">$3.99</span></h2>
                         <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>    
                     </div>
                 </div>
@@ -91,8 +90,8 @@
             <div class="col col-sm col-md">
                 <div class="media">
                     <div class="media-body">
-                        <h2 class="mt-0">Weekend Grand Buffet <span class="badge badge-warning">Trending</span></h2>
-                        <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>        
+                        <h2 class="mt-0">Weekend Grand Buffet <span class="badge badge-danger">NEW</span></h2>
+                        <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>        
                     </div>
                     <img class="d-flex ml-3 img-thumbnail align-self-center" src="img/buffet.png" alt="Weekend Grand Buffet">
                 </div>
@@ -109,10 +108,74 @@
                     <div class="media-body">
                         <h2 class="mt-0">Alberto Somayya</h2>
                         <h4>Executive Chef</h4>
-                        <p>Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>
+                        <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div class="row row-content" id="reservation">
+        <div class="col-12 col-sm-8 offset-sm-2">
+            <div class="card">
+                <h3 class="card-header bg-warning text-white">Reserve a Table</h3>
+                <div class="card-body">
+                    <form id="reservation">
+                        <!--No. of Guest -->
+                        <div class="form-group row">
+                            <label for="noOfGuest" class="col-md-2 col-form-label">Number of Guests</label>
+                            <div class="col-md-10">
+                                <div class="form-check-inline">
+                                    <input class="form-check-input" type="radio" name="guest1" id="guest1" value="guest1" checked>
+                                    <label class="form-check-label" for="guest1">1 </label>
+                                </div>
+                                <div class="form-check-inline">
+                                    <input class="form-check-input" type="radio" name="guest2" id="guest2" value="guest2">
+                                    <label class="form-check-label" for="guest2">2 </label>
+                                </div>
+                                <div class="form-check-inline">
+                                    <input class="form-check-input" type="radio" name="guest3" id="guest3" value="guest3">
+                                    <label class="form-check-label" for="guest3">3 </label>
+                                </div>
+                                <div class="form-check-inline">
+                                    <input class="form-check-input" type="radio" name="guest4" id="guest4" value="guest4">
+                                    <label class="form-check-label" for="guest4">4 </label>
+                                </div>
+                                <div class="form-check-inline">
+                                    <input class="form-check-input" type="radio" name="guest5" id="guest5" value="guest5">
+                                    <label class="form-check-label" for="guest5">5 </label>
+                                </div>
+                                <div class="form-check-inline">
+                                    <input class="form-check-input" type="radio" name="guest6" id="guest6" value="guest6">
+                                    <label class="form-check-label" for="guest6">6 </label>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Contact no.-->
+                        <div class="form-group row">
+                            <!-- tel num col-12 takes whole width when small screen -->
+                            <label for="datetime" class="col-12 col-md-2 col-form-label">Date and Time</label>
+                            <!--Area code-->
+                            <div class="col-12 col-md-4">
+                                <input type="text" class="form-control" id="dete" name="dete" placeholder="Date" required>
+                            </div>
+                            <!--tel num-->
+                            <div class="col-12 col-md-4">
+                                <input type="text" class="form-control" id="time" name="time" placeholder="Time" required>
+                            </div>                        
+                        </div>
+
+                        <!--form reserve button-->
+                        <div class="form-group row">
+                            <div class="offset-md-2 col-md-10">
+                                <button type="submit" class="btn btn-primary">
+                                    Reserve
+                                </button>
+                            </div>
+                        </div> 
+                    </form>                         
+                </div>
+            </div>
+        </div>
         </div>
     </div>
 
